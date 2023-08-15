@@ -29,8 +29,8 @@ classdef Environment < handle
             obj.xlimit = xlimit;
             obj.ylimit = ylimit;
             obj.lengthLimits = lengthLims;
-            obj.jointRange(1) = floor(abs(roller(1)-pin(1))/lengthLims(2)*1.5+3);
-            obj.jointRange(2) = ceil(abs(roller(1)-pin(1))/lengthLims(2)*3 + 3);
+            obj.jointRange(1) = floor(abs(roller(1)-pin(1))/lengthLims(2)*1.5+5);
+            obj.jointRange(2) = ceil(abs(roller(1)-pin(1))/lengthLims(2)*3 + 5);
             obj.stepNum = 0;
             obj.mode = mode;
             obj.int_heat = 0;

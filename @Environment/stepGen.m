@@ -9,12 +9,15 @@ for k = 1:num
     %Based on the scores, make new generation.
     
     %Deal with heat
+    %{
     if(obj.flt_lastHighScore == obj.population(1).flt_score)
         heat = heat+1;
     else
         heat = 0;
         obj.flt_lastHighScore = obj.population(1).flt_score;
     end
+    %}
+    
     %FIXME - Parallelize
     index = ceil(obj.popsize/4);
     for i = 1:floor(obj.popsize/4)

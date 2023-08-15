@@ -11,8 +11,6 @@ function scorePop(env_obj)
 
             case 2
                 score = 10*env_obj.population(i).flt_maxLoad;
-            case 3
-                score = env_obj.population(i).flt_maxLoad*env_obj.population(i).flt_maxLoad/env_obj.population(i).flt_cost;
         end
         cost = env_obj.population(i).flt_cost;
         budget = env_obj.budget;
@@ -34,7 +32,7 @@ function scorePop(env_obj)
         %Take away points for member length restraints
         for j = 1:(env_obj.population(i).int_njts*2 - 3)
             if(env_obj.population(i).fltvec_lengths(j)<env_obj.lengthLimits(1))
-                score = score - 200;
+                score = score - 100;
                 score = score - 100*abs(env_obj.population(i).fltvec_lengths(j)-env_obj.lengthLimits(1));
                 %Maybe some other condition?
             end
