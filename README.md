@@ -26,3 +26,5 @@ Although I've posted the project, I still feel it has a lot of untapped potentia
 - Decrease model tendency to get stuck in local maxima. 
 - Improve app usability.
 - Parallellize some processes.
+
+Notes: The model does really bad with deleting points and inserting points where a member is too long. I have ideas on how to approach these. 
