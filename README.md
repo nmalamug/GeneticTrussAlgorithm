@@ -24,5 +24,5 @@ Although I've posted the project, I still feel it has a lot of untapped potentia
 - Create speed optimizations for truss generation.
 - Reuse more of the truss in generational steps.
 - Decrease model tendency to get stuck in local maxima. 
-- Improve the FrontEnd UI/UX of the app.
+- Improve app usability.
 - Parallellize some processes.
