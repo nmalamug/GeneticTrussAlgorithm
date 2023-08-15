@@ -30,8 +30,8 @@ The "Run" box contains all of the settings that impact user experience.
 
 There are three modes: 
 
-- **Hybrid** - The default mode, optimizes for truss strength, but also considers costs.
-- **Max Load** - Considers only max load, and attempts to construct the most strongest truss possible within the budget. 
+- **Hybrid** - The default mode, optimizes for truss strength, but also considers amount of material used.
+- **Max Load** - Considers only max load, and attempts to construct the most strongest truss possible within the material allotment. 
 - **Load/Cost** - Attempts to find the truss with the optimal load/cost ratio. 
 
 To begin running the algorithm, click on "Evolve." You are allowed to configure the number of generations the optimizer runs for, as well as how often it shows the best design. When the optimizer is finished, you can choose to run for more generations, view less optimal trusses, reset, or export. 
