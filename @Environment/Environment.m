@@ -32,7 +32,7 @@ classdef Environment < handle
             obj.ylimit = ylimit;
             obj.lengthLimits = lengthLims;
             obj.jointRange(1) = floor(abs(glob.fltvec_roller(1)-glob.fltvec_pin(1))/lengthLims(2)*1.5+7);
-            obj.jointRange(2) = ceil(abs(glob.fltvec_roller(1)-glob.fltvec_pin(1))/lengthLims(2)*3 + 5);
+            obj.jointRange(2) = ceil(abs(glob.fltvec_roller(1)-glob.fltvec_pin(1))/lengthLims(2)*3 + 7);
             obj.stepNum = 0;
             obj.mode = mode;
             obj.flt_lastHighScore = -99999;
