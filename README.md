@@ -95,11 +95,3 @@ Although I've posted the project, I still feel it has a lot of untapped potentia
 With improvement, there are likely even ways to extend this model to 3 dimensions, prioritize creating trusses that are easier to physically build, and evaluate dynamic loading conditions. 
 
 #### Thanks for Reading - NM.
-
-Tags:
-Genetic
-Truss Optimization
-Generation
-Algorithm
-
-  
