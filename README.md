@@ -102,9 +102,7 @@ With improvement, there are likely even ways to extend this model to 3 dimension
 #### Thanks for Reading - NM.
 
 ## 5. Gallery
-<img src="./Media/TrussOverTop.gif">
-
-<img src="./Media/OnTheBottom.gif">
+<img src="./Media/TrussOverTop.gif" width="50%" height="50%"> <img src="./Media/OnTheBottom.gif" width="50%" height="50%">
 
 Two interesting approaches the model took to the same configuration in different runs. 
 
