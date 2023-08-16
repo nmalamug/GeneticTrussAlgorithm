@@ -78,7 +78,7 @@ The initial goals with this project were to:
 
 ### 3.3 Results
 
-This program does serve as a method for generating optimized 2D trusses for static loading conditions, but tends to get stuck in local maxima. The algorithm, therefore, is highly unlikely to reach global maxima. If substantial effort is put forth, a human will out-design this program. However, the maxima where the program gets stuck tend to be reasonably well-designed. Partial success. 
+This program does serve as a method for generating optimized 2D trusses for static loading conditions, but tends to get stuck in local maxima. The algorithm, therefore, is highly unlikely to reach global maxima. If substantial effort is put forth, a human will out-design this program. However, the maxima where the program gets stuck tend to be reasonably well-optimized. Partial success. 
 
 It is also usable in an application format, even in spite of the messy user interface and need to have MATLAB open while using it. This wasn't the priority of the project, so I still consider this a success. 
 
