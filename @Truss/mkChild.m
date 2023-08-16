@@ -1,10 +1,9 @@
 function newobj = mkChild(truss_obj)
-%MKCHILD Makes a child of the current truss based on the aspects of the
-%current truss. 
+% Please forgive me, for I have sinned. This function is a mess. But it
+% works juuuust well enough and is hard enough to change that it's here to
+% stay.
 
-%Pick a random set of joints to move.
-%Move those joints. 
-%Right now assumes the number of loads is 1. 
+
 newX = truss_obj.fltvec_x;
 newY = truss_obj.fltvec_y;
 nLoads = 1;
@@ -12,6 +11,13 @@ nMovable = truss_obj.int_njts - nLoads - 2;
 nMoving = 7*randi(nMovable);
 sigmaX = truss_obj.flt_xlimit/40;
 sigmaY = truss_obj.flt_ylimit/40;
+
+%MKCHILD Makes a child of the current truss based on the aspects of the
+%current truss. 
+
+%Pick a random set of joints to move.
+%Move those joints. 
+%Right now assumes the number of loads is 1. 
 
 for i = 1:nMoving
     targetJt = randi([3+nLoads, truss_obj.int_njts]);
