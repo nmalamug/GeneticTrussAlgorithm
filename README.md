@@ -103,3 +103,4 @@ You're still here? Here are some resources to get started on simple truss analys
 - [Research Paper Outlining Common Methods Used in Genetic Algorithms](https://www.sciencedirect.com/science/article/abs/pii/B9780444506801500723)
 - [Instructable Dealing with Simple Truss Calculations](https://www.instructables.com/Analyzing-a-Simple-Truss-by-the-Method-of-Joints/)
 - [Using Linear Algebra to Solve a Simple Truss in MATLAB](https://ecs.syr.edu/faculty/glauser/mae315/es100/lec605.pdf)
+- [WordPress Article About Using Linear Algebra to Solve Trusses](https://applicationanthologys16.wordpress.com/2016/02/11/truss-bridges-and-linear-algebra/)
