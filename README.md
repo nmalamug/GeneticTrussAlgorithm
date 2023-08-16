@@ -1,5 +1,7 @@
 # Genetic Truss Optimizer
-<img src="./Media/TrussProgGif.gif">
+<img src="./Media/TrussProgDemo2.gif">
+
+"+" is Pin, "o" is roller, "v" is load. 
 
 (Video is sped up, but reflects actual truss generation capabilities)
 
