@@ -96,3 +96,10 @@ Although I've posted the project, I still feel it has a lot of untapped potentia
 With improvement, there are likely even ways to extend this model to 3 dimensions, prioritize creating trusses that are easier to physically build, and evaluate dynamic loading conditions. 
 
 #### Thanks for Reading - NM.
+
+## 5. Blog
+You're still here? Here are some resources to get started on static analysis and genetic algorithms!
+- [TutorialsPoint Introduction to Genetic Algorithms](https://www.tutorialspoint.com/genetic_algorithms/genetic_algorithms_introduction.htm)
+- [Early Research Paper (2003) Outlining Common Methods Used in Genetic Algorithms](https://www.sciencedirect.com/science/article/abs/pii/B9780444506801500723)
+- [Instructable Dealing with Simple Truss Calculations](https://www.instructables.com/Analyzing-a-Simple-Truss-by-the-Method-of-Joints/)
+- [Using Linear Algebra to Solve a Simple Truss in MATLAB](https://ecs.syr.edu/faculty/glauser/mae315/es100/lec605.pdf)
