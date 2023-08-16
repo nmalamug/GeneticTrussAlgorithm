@@ -30,24 +30,43 @@ if(genJoint < 10)
         %Delete that joint
         newX(tar) = [];
         newY(tar) = [];
-        newNjts = truss_obj.int_njts + genJoint;
-        newobj = Truss(newNjts, truss_obj.flt_xlimit, truss_obj.flt_ylimit, truss_obj.pin, truss_obj.roller, truss_obj.load, newX, newY);
+        %Attempt to resolve truss if target is 0 force member. 
+        if(sum(truss_obj.mat_cnxs(:, tar)) == 2)
+            new_cnxs = truss_obj.mat_cnxs;
+            where_to = [0 0];
+            count = 1;
+            for ii = 1:truss_obj.int_njts
+                if(truss_obj.mat_cnxs(ii,tar) == 1)
+                    where_to(count) = ii;
+                    count = count + 1;
+                end
+            end
+            new_cnxs(where_to(1), where_to(2)) = 1;
+            new_cnxs(where_to(2), where_to(1)) = 1;
+            new_cnxs(tar,:) = [];
+            new_cnxs(:,tar) = [];
+            newNjts = truss_obj.int_njts + genJoint;
+            newobj = Truss(newNjts, truss_obj.flt_xlimit, truss_obj.flt_ylimit, truss_obj.global_glob, newX, newY, new_cnxs);
+        else
+            newNjts = truss_obj.int_njts + genJoint;
+            newobj = Truss(newNjts, truss_obj.flt_xlimit, truss_obj.flt_ylimit, truss_obj.global_glob, newX, newY);
+        end
     else
         genJoint = 0;
         newNjts = truss_obj.int_njts + genJoint;
-        newobj = Truss(newNjts, truss_obj.flt_xlimit, truss_obj.flt_ylimit, truss_obj.pin, truss_obj.roller, truss_obj.load, newX, newY,truss_obj.mat_cnxs);
+        newobj = Truss(newNjts, truss_obj.flt_xlimit, truss_obj.flt_ylimit, truss_obj.global_glob, newX, newY,truss_obj.mat_cnxs);
     end
 elseif(genJoint < 40)
     genJoint = 0;
     newNjts = truss_obj.int_njts + genJoint;
-    newobj = Truss(newNjts, truss_obj.flt_xlimit, truss_obj.flt_ylimit, truss_obj.pin, truss_obj.roller, truss_obj.load, newX, newY,truss_obj.mat_cnxs);
+    newobj = Truss(newNjts, truss_obj.flt_xlimit, truss_obj.flt_ylimit, truss_obj.global_glob, newX, newY,truss_obj.mat_cnxs);
 
 elseif(genJoint < 80)
     genJoint = 1;
     newX(truss_obj.int_njts+1) = truss_obj.flt_xlimit*rand();
     newY(truss_obj.int_njts+1) = truss_obj.flt_ylimit*rand();
     newNjts = truss_obj.int_njts + genJoint;
-    newobj = Truss(newNjts, truss_obj.flt_xlimit, truss_obj.flt_ylimit, truss_obj.pin, truss_obj.roller, truss_obj.load, newX, newY);
+    newobj = Truss(newNjts, truss_obj.flt_xlimit, truss_obj.flt_ylimit, truss_obj.global_glob, newX, newY);
 else
     genJoint = 2;
     newX(truss_obj.int_njts+1) = truss_obj.flt_xlimit*rand();
@@ -55,7 +74,7 @@ else
     newX(truss_obj.int_njts+2) = truss_obj.flt_xlimit*rand();
     newY(truss_obj.int_njts+2) = truss_obj.flt_ylimit*rand();
     newNjts = truss_obj.int_njts + genJoint;
-    newobj = Truss(newNjts, truss_obj.flt_xlimit, truss_obj.flt_ylimit, truss_obj.pin, truss_obj.roller, truss_obj.load, newX, newY);
+    newobj = Truss(newNjts, truss_obj.flt_xlimit, truss_obj.flt_ylimit, truss_obj.global_glob, newX, newY);
 end
 
 

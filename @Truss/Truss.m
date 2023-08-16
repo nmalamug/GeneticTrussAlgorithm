@@ -20,30 +20,26 @@ classdef Truss < handle
         fltvec_lengths
         flt_xlimit
         flt_ylimit
-        pin
-        roller
-        load
+        global_glob
     end
 
     methods
         %Constructor
-        function obj = Truss(numjoints, xlimit, ylimit, pin, roller, load, xcoords,  ycoords,cnxs) %Add min distance apart\
+        function obj = Truss(numjoints, xlimit, ylimit, glob, xcoords,  ycoords,cnxs) %Add min distance apart\
             %pin -> [xpos, ypos], roller -> [xpos, ypos, angle], load -> [xpos, ypos, dir]
             %Define the joint positions of the truss
             obj.flt_xlimit = xlimit;
             obj.flt_ylimit = ylimit;
-            obj.pin = pin;
-            obj.roller = roller;
-            obj.load = load;
+            obj.global_glob = glob;
             obj.int_njts = numjoints;
             switch nargin
                 case 0
                     return
-                case 6
+                case 4
                     %If not coordinates are given, create them.
                     setVars(obj);
-                    defineJoints(numjoints, xlimit, ylimit, pin, roller, load, obj)
-                case 8 %When making child or when coords predefined
+                    defineJoints(numjoints, xlimit, ylimit, obj.global_glob.fltvec_pin, obj.global_glob.fltvec_roller, obj.global_glob.fltvec_load, obj)
+                case 6 %When making child or when coords predefined
                     obj.fltvec_x = xcoords;
                     obj.fltvec_y = ycoords;
                     obj.mat_cnxs = zeros(obj.int_njts);
@@ -51,7 +47,7 @@ classdef Truss < handle
                     %Maybe try to determine these in the environment instead?
                     getCnxsMJ(obj);
 
-                case 9
+                case 7
                     obj.fltvec_x = xcoords;
                     obj.fltvec_y = ycoords;
                     obj.mat_cnxs = cnxs;

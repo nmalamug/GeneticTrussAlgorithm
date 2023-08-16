@@ -12,7 +12,7 @@ function scorePop(env_obj)
             case 2
                 score = 10*env_obj.population(i).flt_maxLoad;
             case 3
-                score = env_obj.population(i).flt_maxLoad*env_obj.population(i).flt_maxLoad/env_obj.population(i).flt_cost;
+                score = (env_obj.budget*10*env_obj.population(i).flt_maxLoad/env_obj.population(i).flt_cost + 10*env_obj.population(i).flt_maxLoad)/2;
         end
         cost = env_obj.population(i).flt_cost;
         budget = env_obj.budget;
@@ -24,10 +24,10 @@ function scorePop(env_obj)
         %Take away points for being outside of bounding box
         for j = 1:(env_obj.population(i).int_njts)
             if((env_obj.population(i).fltvec_x(j) > env_obj.xlimit) || (env_obj.population(i).fltvec_x(j) <0))
-                score = score - 100;
+                score = score - 500;
             end
             if((env_obj.population(i).fltvec_y(j) > env_obj.ylimit) || (env_obj.population(i).fltvec_y(j) <0))
-                score = score - 100;
+                score = score - 500;
             end            
         end
 
