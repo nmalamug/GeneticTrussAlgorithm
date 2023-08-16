@@ -65,7 +65,7 @@ When an Environment is first created, the generator randomly creates a specified
 
 #### 3.1.2 Stepping a Generation
 
-To step a generation, Trusses are simulated, scored, ranked based on an optimization function (the modes outlined in section 2). They can be scored on their maximum carrying capacity at the load joint, their cost, or both. They then see deductions based on member lengths, bounding box infringements, and budget overages. 
+To step a generation, Trusses are simulated, scored, ranked based on an optimization function (the modes outlined in section 2). They can be scored on their maximum carrying capacity at the load joint, their cost, or both. They then see deductions based on member lengths (too short or too long), bounding box infringements, and budget overages. 
 
 Once scoring and ranking are complete, the program keeps the highest scoring 1/4 of all trusses, replacing the others with modified copies of the high scorers. This repeats every generation until stopping conditions are met. 
 
