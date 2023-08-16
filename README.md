@@ -47,13 +47,40 @@ At runtime, the optimizer stores a variety of trusses in each generation. Some a
 
 ### 2.5 Export a Truss
 
+Exporting a Truss is currently disabled. 
+
 ## 3. Analysis
 
-### 3.1 How It Works
+### 3.1 How It Works (The Basic Idea)
+
+The program is split into two main sections: the Environment and Trusses. They can be thought of as the judge and contestants at a yearly sporting event. Judges score contestants based on their performance, and contestants come back stronger the next year after recieving feedback. 
+
+The Environment plays the role of the judge, scoring trusses based on their performance. The Trusses are the contestants, who try to win the favor of the judge. When a round of scoring is done, the Trusses improve after some feedback and another round begins. 
+
+#### 3.1.1 Initializing Trusses
+
+When an Environment is first created, the program randomly generates a specified number of trusses. This is done by selecting points, creating a frame, and then constructing internal connections. Along the way, functions are run to validate that each Truss is a simple truss with the given initial conditions (pin, roller, load).
+
+#### 3.1.2 Stepping a Generation
+
+To step a generation, Trusses are simulated, scored, ranked based on an optimization function (the modes outlined in section 2). They can be scored on their maximum carrying capacity at the load joint, their cost, or both. They then see deductions based on member lengths, bounding box infringements, and budget overages. 
+
+Once scoring and ranking are complete, the program keeps the highest scoring 1/4 of all trusses, replacing the others with modified copies of the high scorers. This repeats every generation until stopping conditions are met. 
 
 ### 3.2 Initial Goals
 
+The initial goals with this project were to:
+- Create a method for generating optimized structures for a given 2D static loading condition.
+- Make the program usable in an application format.
+- Have fun!
+
 ### 3.3 Results
+
+This program does serve as a method for generating optimized 2D trusses for static loading conditions, but tends to get stuck in local maxima. The algorithm, therefore, is highly unlikely to reach global maxima. If substantial effort is put forth, a human will out-design this program. However, the maxima where the program gets stuck tend to be reasonably well-designed. Partial success. 
+
+It is also usable in an application format, even in spite of the messy user interface and need to have MATLAB open while using it. This wasn't the priority of the project, so I still consider this a success. 
+
+I really enjoyed this project - definitely good on the last one 🎉.
 
 ## 4. ToDo
 Although I've posted the project, I still feel it has a lot of untapped potential. When I come back to this project I will:
@@ -63,4 +90,7 @@ Although I've posted the project, I still feel it has a lot of untapped potentia
 - Improve app usability.
 - Parallellize some processes.
 
-Notes: The model does really bad with deleting points and inserting points where a member is too long. I have ideas on how to approach these. 
+With improvement, there are likely even ways to extend this model to 3 dimensions, prioritize creating trusses that are easier to physically build, and evaluate dynamic loading conditions. 
+
+#### Thanks for Reading - NM.
+  
