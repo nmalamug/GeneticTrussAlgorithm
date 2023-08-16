@@ -98,7 +98,7 @@ With improvement, there are likely even ways to extend this model to 3 dimension
 #### Thanks for Reading - NM.
 
 ## 5. Blog
-You're still here? Here are some resources to get started on static analysis and genetic algorithms!
+You're still here? Here are some resources to get started on simple truss analysis and genetic algorithms!
 - [TutorialsPoint Introduction to Genetic Algorithms](https://www.tutorialspoint.com/genetic_algorithms/genetic_algorithms_introduction.htm)
 - [Early Research Paper (2003) Outlining Common Methods Used in Genetic Algorithms](https://www.sciencedirect.com/science/article/abs/pii/B9780444506801500723)
 - [Instructable Dealing with Simple Truss Calculations](https://www.instructables.com/Analyzing-a-Simple-Truss-by-the-Method-of-Joints/)
