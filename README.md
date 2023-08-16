@@ -108,9 +108,13 @@ Here are results from some of the more interesting runs that happened while I wa
 
 <img src="./Media/TrussOverTop.gif" width="40%" height="40%"> <img src="./Media/OnTheBottom.gif" width="40%" height="40%">
 
+---
+
 **2. Very similar starting conditions with vastly different loading potential when failure mode is assumed to be compression. In one, pin is to the right of the roller. In the second, the pin is to the left.** 
 
 <img src="./Media/WeirdRuns.gif" width="40%" height="40%">
+
+--- 
 
 **3. Interesting run of the flat configuration, but without numbers to back it up.**
 
