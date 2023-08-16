@@ -40,6 +40,9 @@ classdef Environment < handle
                 njts = randi([obj.jointRange]);
                 obj.population(ii) = Truss(njts,xlimit,ylimit,glob);
             end
+            % Initial Scoring and Ranking
+            obj.scorePop;
+            obj.rankPop;
         end
     end
 end
