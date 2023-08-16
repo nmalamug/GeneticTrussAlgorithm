@@ -1,6 +1,8 @@
 # Genetic Truss Optimizer
+<img src="./Media/TrussProgGif.gif">
 ## 1. Welcome!
 Welcome to the Genetic Truss Optimizer. This is a MATLAB application that automatically generates an optimized truss based on initial conditions that you specify, such as pin, roller, and load placement. 
+
 ## 2. How To
 
 ### 2.1 Launch the App
@@ -10,6 +12,8 @@ To launch the app, you must have [MATLAB](https://www.mathworks.com/products/mat
 ```
 git clone https://github.com/nmalamug/GeneticTrussAlgo.git
 ```
+<img src="./Media/WhereToClick.png">
+
 # Add picture here on which file to click on
 
 ### 2.2 Enter Initial Conditions
