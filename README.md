@@ -27,7 +27,7 @@ The X limit and Y limit define a bounding rectangle for your truss between 0 and
 
 Also configurable are a cost function based on the number of joints/total length of all members, a critical function that specifies truss failure points, and length limits for members. **Specifying length limits does not guarantee all members will be within those limits.** Trusses are penalized for having members outside length limits, but not disqualified. 
 
-Population can also be changed. This will impact how many trusses are simultaneously evaluated between each generation. Larger will lead to more variance and more powerful generations, but slower runtimes. I usually find 150-400 to be a good balance. 
+Population can also be changed. This will impact how many trusses are simultaneously evaluated between each generation. Larger will lead to more variance and power per generation, but slower runtimes. I usually find 150-400 to be a good balance. 
 
 <img src="./Media/TrussProgramGUI.png">
 
