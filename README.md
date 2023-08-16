@@ -4,7 +4,7 @@
 (Video is sped up, but reflects actual truss generation capabilities)
 
 ## 1. Welcome!
-Welcome to the Genetic Truss Optimizer. This is a MATLAB application/algorithm that automatically generates an optimized truss based on initial conditions that you specify, such as pin, roller, and load placement. 
+Welcome to the Genetic Truss Optimizer. This is a MATLAB application/algorithm that automatically generates an optimized truss based on initial conditions that you specify, such as pin, roller, and load placement. Originally meant to satisfy my own curiosity about computational tools for engineering design, this type of algorithm may have applications in 3D printed supports if loading conditions are known and odd geometries are not a manufacturing constraint. 
 
 ## 2. How To
 
@@ -53,11 +53,13 @@ Exporting a Truss is currently disabled.
 
 ## 3. Analysis
 
+<img src="./Media/TrussAlgoFlowchart.png">
+
 ### 3.1 How It Works (The Basic Idea)
 
 The algorithm is split into two main sections: the Environment and Trusses. They can be thought of as the judge and contestants at a yearly sporting event. Judges score contestants based on their performance, and contestants come back stronger the next year after recieving feedback. 
 
-The Environment plays the role of the judge, scoring trusses based on their performance. The Trusses are the contestants, who try to win the favor of the judge. When a round of scoring is done, the Trusses improve after some feedback and another round begins. 
+The Environment plays the role of the judge, scoring trusses based on their performance. The Trusses are the contestants, who try to win the favor of the Environment. When a round of scoring is done, the Trusses improve after some feedback and another round begins. 
 
 #### 3.1.1 Initializing Trusses
 
