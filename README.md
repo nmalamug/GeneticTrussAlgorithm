@@ -102,17 +102,20 @@ With improvement, there are likely even ways to extend this model to 3 dimension
 #### Thanks for Reading - NM.
 
 ## 5. Gallery
-<img src="./Media/TrussOverTop.gif" width="50%" height="50%"> <img src="./Media/OnTheBottom.gif" width="50%" height="50%">
+Here are results from some of the more interesting runs that happened while I was testing and debugging!
 
-Two interesting approaches the model took to the same configuration in different runs. 
+**1. Two interesting approaches the model took to the same configuration in different runs.**
 
-<img src="./Media/WeirdRuns.gif">
+<img src="./Media/TrussOverTop.gif" width="40%" height="40%"> <img src="./Media/OnTheBottom.gif" width="40%" height="40%">
 
-Very similar starting conditions with vastly different loading potential when failure mode is assumed to be compression. In one, pin is to the right of the roller. In the second, the pin is to the left. 
+**2. Very similar starting conditions with vastly different loading potential when failure mode is assumed to be compression. In one, pin is to the right of the roller. In the second, the pin is to the left.** 
 
-<img src="./Media/TrussProgDemo2.gif">
+<img src="./Media/WeirdRuns.gif" width="40%" height="40%">
 
-Interesting run of the flat configuration, but without numbers to back it up.
+**3. Interesting run of the flat configuration, but without numbers to back it up.**
+
+<img src="./Media/TrussProgDemo2.gif" width="40%" height="40%">
+
 
 ## 6. Blog
 You're still here? Here are some resources to get started on simple truss analysis and genetic algorithms!
