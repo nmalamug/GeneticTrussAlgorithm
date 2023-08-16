@@ -1,7 +1,8 @@
 function newobj = mkChild(truss_obj)
 % Please forgive me, for I have sinned. This function is a mess. But it
 % works juuuust well enough and is hard enough to change that it's here to
-% stay.
+% stay. Making sweeping changes here will probably break a couple things.
+% :-|
 
 
 newX = truss_obj.fltvec_x;
