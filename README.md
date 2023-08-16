@@ -1,5 +1,5 @@
 # Genetic Truss Optimizer
-<img src="./Media/TrussProgDemo2.gif">
+<img src="./Media/SolidTrussDemo.gif">
 
 "+" is Pin, "o" is roller, "v" is load. 
 
@@ -101,7 +101,22 @@ With improvement, there are likely even ways to extend this model to 3 dimension
 
 #### Thanks for Reading - NM.
 
-## 5. Blog
+## 5. Gallery
+<img src="./Media/TrussOverTop.gif">
+
+<img src="./Media/OnTheBottom.gif">
+
+Two interesting approaches the model took to the same configuration in different runs. 
+
+<img src="./Media/WeirdRuns.gif">
+
+Very similar starting conditions with vastly different loading potential when failure mode is assumed to be compression. In one, pin is to the right of the roller. In the second, the pin is to the left. 
+
+<img src="./Media/TrussProgDemo2.gif">
+
+Interesting run of the flat configuration, but without numbers to back it up.
+
+## 6. Blog
 You're still here? Here are some resources to get started on simple truss analysis and genetic algorithms!
 - [TutorialsPoint Introduction to Genetic Algorithms](https://www.tutorialspoint.com/genetic_algorithms/genetic_algorithms_introduction.htm)
 - [Research Paper Outlining Common Methods Used in Genetic Algorithms](https://www.sciencedirect.com/science/article/abs/pii/B9780444506801500723)
