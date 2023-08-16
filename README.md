@@ -4,7 +4,7 @@
 (Video is sped up, but reflects actual truss generation capabilities)
 
 ## 1. Welcome!
-Welcome to the Genetic Truss Optimizer. This is a MATLAB application that automatically generates an optimized truss based on initial conditions that you specify, such as pin, roller, and load placement. 
+Welcome to the Genetic Truss Optimizer. This is a MATLAB application/algorithm that automatically generates an optimized truss based on initial conditions that you specify, such as pin, roller, and load placement. 
 
 ## 2. How To
 
@@ -55,13 +55,13 @@ Exporting a Truss is currently disabled.
 
 ### 3.1 How It Works (The Basic Idea)
 
-The program is split into two main sections: the Environment and Trusses. They can be thought of as the judge and contestants at a yearly sporting event. Judges score contestants based on their performance, and contestants come back stronger the next year after recieving feedback. 
+The algorithm is split into two main sections: the Environment and Trusses. They can be thought of as the judge and contestants at a yearly sporting event. Judges score contestants based on their performance, and contestants come back stronger the next year after recieving feedback. 
 
 The Environment plays the role of the judge, scoring trusses based on their performance. The Trusses are the contestants, who try to win the favor of the judge. When a round of scoring is done, the Trusses improve after some feedback and another round begins. 
 
 #### 3.1.1 Initializing Trusses
 
-When an Environment is first created, the program randomly generates a specified number of trusses. This is done by selecting points, creating a frame, and then constructing internal connections. Along the way, functions are run to validate that each Truss is a simple truss with the given initial conditions (pin, roller, load).
+When an Environment is first created, the generator randomly creates a specified number of trusses. This is done by selecting points, creating a frame, and then constructing internal connections. Along the way, functions are run to validate that each Truss is a simple truss with the given initial conditions (pin, roller, load).
 
 #### 3.1.2 Stepping a Generation
 
